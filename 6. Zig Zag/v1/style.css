@@ -1,0 +1,157 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Boldonse', sans-serif;
+  padding: 20px;
+}
+
+header {
+  padding: 10px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+main.zig-zag-layout {
+  padding: 20px;
+  text-align: center;
+}
+
+main.zig-zag-layout h1 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.zig-zag-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.zig-zag-item.left-top,
+.zig-zag-item.left-bottom {
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.zig-zag-item.right-top,
+.zig-zag-item.right-bottom {
+  justify-content: flex-start;
+  padding-left: 40px;
+}
+
+.content {
+  padding: 20px 0px;
+}
+
+.zig-zag-item .content {
+  text-align: left;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.zig-zag-item.left-top .content p:first-child {
+  margin-bottom: 40px; /* Adjust this value for the desired space */
+}
+
+.zig-zag-item .image-container {
+  max-width: 80%;
+}
+
+.zig-zag-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+  main div:nth-child(odd) {
+    flex-direction: column-reverse; /* Reverse the order */
+  }
+  main.zig-zag-layout {
+    padding: 10px;
+    text-align: center;
+  }
+
+  main.zig-zag-layout h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 52px;
+  }
+
+  .row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .zig-zag-item {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .zig-zag-item.left-top,
+  .zig-zag-item.right-top,
+  .zig-zag-item.left-bottom {
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .zig-zag-item .content,
+  .zig-zag-item .image-container {
+    max-width: 90%;
+  }
+}
+
+@font-face {
+  font-family: 'Boldonse';
+  src: url('fonts/Boldonse-Regular.ttf') format('truetype');
+}

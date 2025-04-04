@@ -1,0 +1,105 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Boldonse', sans-serif;
+  padding: 20px;
+}
+
+header {
+  padding: 10px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px; /* Should be the same as width for a circle */
+  background-color: #333; /* Dark background color */
+  border-radius: 50%; /* Makes it a circle */
+  color: white; /* Text color for "Logo" */
+  text-align: center; /* Center the text horizontally */
+  line-height: 50px; /* Center the text vertically */
+  font-size: 12px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+/* Added spacing here */
+main {
+  padding: 10px 135px;
+}
+
+.large-box {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px; /* Space between large box and small boxes */
+}
+
+.large-box h2 {
+  margin-bottom: 10px; /* Space between title and content */
+}
+
+.small-boxes-container {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 0px 96px;
+}
+
+.small-box {
+  background-color: #666;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  align-content: center;
+  width: 45%;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+  main {
+    padding: 10px 20px;
+  }
+  .small-boxes-container {
+    direction: column;
+    align-items: center;
+    padding: 0px 60px;
+  }
+
+  .small-box {
+    width: 80%;
+  }
+}
+
+/* Example of @font-face */
+@font-face {
+  font-family: 'Boldonse';
+  src: url('fonts/Boldonse-Regular.ttf') format('truetype');
+}
